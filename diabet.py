@@ -1,6 +1,6 @@
 #Feature Engineering
 
-#Veri setindeki değişkenler
+#Variables in the dataset
 
 # Pregnancies: Hamilelik sayısı
 # Glucose Oral: glikoz tolerans testinde 2 saatlik plazma glikoz konsantrasyonu
@@ -12,11 +12,9 @@
 # Age: Yaş (yıl)
 # Outcome: Hastalığa sahip (1) ya da değil (0)
 
-#outcome:hedef değişken
-#1:diyabet test sonucu pozitif
-#0:iyabet test sonucu negatif
 
-#Kütüphaneler
+#Libraries
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -33,9 +31,11 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 pd.set_option('display.width', 600)
 
+
 #Loading the dataset
+
 def load_diabet():
-    data = pd.read_csv("HAFTA_06/1-Notes/Ödevler/diabetes.csv")
+    data = pd.read_csv("diabetes.csv")
     return data
 
 df_= load_diabet()
@@ -44,6 +44,7 @@ df.head()
 
 
 #Dataset analysis
+
 df.shape
 df.info()
 df.describe([0, 0.05,0.25, 0.50, 0.75,0.95, 0.99, 1]).T
