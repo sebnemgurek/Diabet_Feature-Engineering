@@ -269,3 +269,12 @@ accuracy_score(y_pred, y_test)
 rf_model = RandomForestClassifier(random_state=46).fit(X_train, y_train)
 y_pred = rf_model.predict(X_test)
 accuracy_score(y_pred, y_test)
+
+#Conclusion
+
+#DecisionTreeRegressor - 0.7705
+#RandomForestClassifier- 0.800
+
+#Random Forest Classifier has higher prediction success, so this can be preferred.
+
+
